@@ -6,8 +6,11 @@ body{
 }
 
 header{
- background-color: var(--gray-1);
- height: 100px;
+    position: fixed;
+    background-color: var(--gray-1);
+    height: 100px;
+    width: 100%;
+    z-index: 1;
 }
 
 .header__container{
@@ -110,6 +113,8 @@ header{
 }
 
 .faq__Left2{
+    position: sticky;
+    top: 10rem;
     width: 533px;
     display: flex;
     flex-direction: column;
@@ -183,6 +188,8 @@ header{
 }
 
 .comments__right2{
+    position: sticky;
+    top: 10rem;
     background-color: var(--brand-1);
     padding: 5rem 3.5rem;
 }
