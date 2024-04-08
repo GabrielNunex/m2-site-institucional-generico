@@ -8,15 +8,15 @@ body{
 header{
     position: fixed;
     background-color: var(--gray-1);
-    height: 100px;
     width: 100%;
     z-index: 1;
+    border-bottom: solid 2px var(--brand-1);
 }
 
 .header__container{
     height: 100%;
     align-items: center;
-    padding: 0 14.5rem;
+    padding: 1.25rem clamp(2rem, 0.846rem + 4.615vw, 5rem);
     display: flex;
     justify-content: space-between;
 }
@@ -30,8 +30,11 @@ header{
     font-weight: var(--text4-fw);
     line-height: var(--text4-lh);
 }
+
+
 .banner{
     height: 781px;
+    padding: 0 clamp(2rem, 0.846rem + 4.615vw, 5rem);
 }
 
 .banner__container{
@@ -74,19 +77,19 @@ header{
 }
 
 .about{
-    padding: 5rem 14.5rem;
+    padding: 5rem clamp(2rem, 0.846rem + 4.615vw, 5rem);
     background-color: var(--gray-1);
 }
 
 .about__container{
-    height: 100%;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    gap: 3.5rem;
 }
 
 .about__title{
-    width: 620;
+    width: 50%;
     color: var(--gray-6);
     font-size: var(--title2-fs);
     font-weight: var(--title2-fw);
@@ -94,7 +97,7 @@ header{
 }
 
 .about__text{
-    max-width: 580px;
+    width: 47%;
     text-align: justify;
     color: var(--gray-5);
     font-size: var(--text1-fs);
@@ -103,19 +106,19 @@ header{
 }
 
 .faq__container{
-    padding: 5rem  14.5rem;
+    padding: 5rem  clamp(2rem, 0.846rem + 4.615vw, 5rem);
     display: flex;
     justify-content: space-between;
+    gap: 3.5rem;
 }
 
 .faq__Left1{
-    width: 620px;
+    width: 50%;
 }
 
 .faq__Left2{
     position: sticky;
     top: 10rem;
-    width: 533px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -151,10 +154,11 @@ header{
     display: flex;
     flex-direction: column;
     gap: 3.75rem;
+    width: 47%;
+    align-items: end;
 }
 
 .faq__item{
-    width: 580px;
     display: flex;
     flex-direction: column;
     gap: 26px;
@@ -177,14 +181,15 @@ header{
 }
 
 .comments__container{
-    padding: 5rem  14.5rem;
+    padding: 5rem  clamp(2rem, 0.846rem + 4.615vw, 5rem);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 3.5rem;
 }
 
 .comments__right1{
-    width: 620px;
+    width: 47%;
 }
 
 .comments__right2{
@@ -210,7 +215,7 @@ header{
 }
 
 .comments__list{
-    width: 620px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -243,7 +248,8 @@ header{
 }
 
 .comments__item__text{
-    width: 412px;
+    max-width: 412px;
+    text-align: justify;
     color: var(--gray-5);
     font-size: var(--text2-fs);
     font-weight: var(--text2-fw);
@@ -330,4 +336,67 @@ dialog{
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1024px) {
+    .comments__item{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .comments__item__container{
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__title{
+        text-align: center;
+    }
+
+    .about__title, .about__text{
+        width: 100%;
+    }
+
+    .about__container, .faq__container, .comments__container{
+    flex-direction: column;
+   }
+
+   .faq__Left1, .faq__list, .comments__right1, .comments__list{
+    width: 100%;
+   }
+
+   .comments__item__text{
+    max-width: fit-content;
+   }
+
+   .faq__Left2{
+    align-items: center;
+   }
+
+   .faq__btn {
+    width: 100%;
+   }
+}
+
+@media (max-width: 425px) {
+    .header__btn{
+        display: none;
+    } 
+
+    .modal{
+        width: fit-content;
+    }
+
+    dialog{
+        width: 100%;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
 }

@@ -15,24 +15,31 @@
     /* Fonte */
     --ff: "Inter", sans-serif;
     --title1-fw: 600;
-    --title1-fs: 52px;
+    /* --title1-fs: 52px; */
+    --title1-fs: clamp(2.5rem, 2.186rem + 1.182vw, 3.25rem);
     --title1-lh: 140%;
     --title2-fw: 600;
-    --title2-fs: 40px;
+    /* --title2-fs: 40px; */
+    --title2-fs: clamp(1.925rem, 1.684rem + 0.906vw, 2.5rem);
     --title2-lh: 160%;
     --title3-fw: 600;
-    --title3-fs: 32px;
+    /* --title3-fs: 32px; */
+    --title3-fs: clamp(1.538rem, 1.344rem + 0.729vw, 2rem);
     --title3-lh: 160%;
     --text1-fw: 400;
-    --text1-fs: 20px;
+    /* --text1-fs: 20px; */
+    --text1-fs: clamp(0.963rem, 0.842rem + 0.453vw, 1.25rem);
     --text1-lh: 150%;
     --text2-fw: 400;
-    --text2-fs: 18px;
+    /* --text2-fs: 18px; */
+    --text2-fs: clamp(0.863rem, 0.753rem + 0.414vw, 1.125rem);
     --text2-lh: 150%;
     --text3-fw: 400;
-    --text3-fs: 16px;
+    /* --text3-fs: 16px; */
+    --text3-fs: clamp(0.863rem, 0.805rem + 0.217vw, 1rem);
     --text3-lh: 150%;
     --text4-fw: 600;
-    --text4-fs: 16px;
+    /* --text4-fs: 16px; */
+    --text4-fs: clamp(0.863rem, 0.805rem + 0.217vw, 1rem);
     --text4-lh: 150%;
 }
